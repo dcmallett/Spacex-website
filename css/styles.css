@@ -184,6 +184,34 @@ section {
 }
 
 /* Footer */
+footer {
+    position: relative;
+    padding: 55px 0;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer ul li {
+    margin-right: 30px;
+    color: #aaa;
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 2.5;
+}
+
+footer ul li a {
+    color: #fff;
+    transition: color 0.6s;
+}
+
+footer ul li a:hover {
+    color: #aaa;
+}
 
 /* hamburger menu */
 .hamburger {
@@ -271,6 +299,10 @@ section {
     transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
+/* Bring menu to the right */
+.show-menu {
+    transform: translateX(0);
+}
 .mobile-main-menu ul {
     display: flex;
     flex-direction: column;
@@ -299,6 +331,82 @@ section {
 }
 
 /* Inner pages */
+.bg-falcon-9 {
+    background-image: url('../assets/falcon-9.webp');
+}
+
+.bg-falcon-heavy {
+    background-image: url('/assets/falcon-heavy.webp');
+}
+
+.bg-dragon {
+    background-image: url('../assets/dragon.webp');
+}
+
+.section-animate {
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Stats */
+.stats {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.stats div span {
+    font-size: 160px;
+}
+
+.stats div h4 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(140px);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+    
+}
+
+@keyframes fadeBounce {
+    0%,
+    20%,
+    50%,
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    
+    40% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+}
 
 /* Media Queries */
 @media (max-width: 960px) {
@@ -326,4 +434,32 @@ section {
     .section-inner h2 {
         font-size: 40px;
     }
-}
+    footer ul li:first-child {
+        position: absolute;
+        top: 30px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    
+      footer ul li {
+        margin-right: 15px;
+      }
+    
+      .logo {
+        width: 150px;
+        margin: auto;
+      }
+    
+      .section-inner-center h3 {
+        font-size: 50px;
+      }
+    
+      /* Stats */
+      .stats {
+        flex-direction: column;
+      }
+    
+      .stats div {
+        margin-bottom: 20px;
+      }
+    }
